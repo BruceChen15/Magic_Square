@@ -132,27 +132,12 @@ int main(int argc,char* argv[]){
         }
 
         //print matrix
-        int a[2*n+2]={0};
-        int b[2*n+2]={0};
-        int c[2]={0};
         for(i=0;i<n;i++){
             for(j=0;j<n;j++){
                 printf("%4d ",magic_square[i][j]);
-                a[i] = a[i] + magic_square[i][j];
-                b[j] = b[j] + magic_square[i][j];
-                if(i==j)    c[0] = c[0] + magic_square[i][j];
-                if(i+j == (n-1))   c[1] = c[1] + magic_square[i][j];
             }
             printf("\n");
         }
-        for(int i = 0;i<n;i++){
-            printf("a[%d] = %d\n",i,a[0]);
-        }
-        for(int i = 0;i<n;i++){
-            printf("b[%d] = %d\n",i,b[0]);
-        }
-        printf("c[0] = %d\n",c[0]);
-        printf("c[1] = %d\n",c[1]);
         printf("Enter a number: ");
         scanf("%d",&n);
     }
